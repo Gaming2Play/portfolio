@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Opdracht 9B Almar</title>
+    <style>
+    body {
+      background-image: url(bc.jpg);
+      background-size: cover;
+    }
+
+    #button_1 {
+      display: block;
+      width: 290px;
+      height: 290px;
+      margin: auto;
+      font-size: 30px;
+      background-image: url(button.png);
+      background-size: cover;
+    }
+
+    #button_2 {
+      display: block;
+      width: 800px;
+      height: 100px;
+      margin: auto;
+      font-size: 30px;
+      background-color: white;
+    }
+    </style>
+  </head>
+  <body>
+    <input type="button" style="background-color: transparent; border-color: transparent; cursor: default;" id="button_1" value="">
+    <input type="button" style="background-color: transparent; border-color: transparent; cursor: default;" id="button_2" value="">
+    <script>
+    let namen = ["Tom", "Tobias", "Sam", "Thijs", "Rob"];
+    let werkwoorden = ["is een", "lijkt op een", "is hetzelfde als een", "kijkt naar een", "valt uit een"];
+    let woorden = ["appel", "aap", "vliegtuig", "ruimteschip", "tas"];
+
+    var button_1 = document.getElementById('button_1');
+
+      button_1.addEventListener('click', ()=>{
+        var colNamen=Math.floor(Math.random()*5);
+        var colWerkwoorden=Math.floor(Math.random()*5);
+        var colEindewoorden=Math.floor(Math.random()*5);
+        var namenEinde = namen[colNamen];
+        var werkwoordenEinde = werkwoorden[colWerkwoorden];
+        var woordenEinde = woorden[colEindewoorden];
+        var uitkomst = namenEinde + " " + werkwoordenEinde + " " + woordenEinde;
+        button_2.value = uitkomst;
+      })
+    </script>
+
+  </body>
+</html>
