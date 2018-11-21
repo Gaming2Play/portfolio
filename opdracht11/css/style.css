@@ -1,0 +1,37 @@
+body {
+  background-color: Yellow;
+  text-align: center;
+}
+
+.wrapper {
+color: black;
+transition: 1s;
+}
+
+
+
+
+
+.img {
+  background-image: url("grid.png");
+  height: 600px;
+  width: 1000px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.25;
+}
+
+#canvas {
+  border: solid black 2px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}

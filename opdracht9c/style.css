@@ -1,0 +1,39 @@
+body{
+  background-color: skyblue;
+}
+
+#myImage{
+  display: block;
+  width: 700px;
+  border-radius: 2em;
+  border-style: solid;
+  border-color: lightgrey;
+  box-shadow: 10px 10px 5px  black;
+  margin-bottom: 1em;
+
+}
+
+.wrapper{
+  margin: 80px auto;
+  width: 700px;
+}
+
+#thumbnailHolder{
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+
+  .thumb{
+    padding: 4px;
+    width: auto;
+    height: 100px;
+  }
+
+  .thumb:hover{
+    background-color: black;
+    width: inherit;
+    height: 120px;
+
+ }
