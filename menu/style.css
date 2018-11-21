@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+nav {
+    background-color: green;
+    color: #ddd;
+}
+.Toggle{
+    background: blue;
+    cursor: pointer;
+    padding: 1em;
+    display: block;
+    text-align: right;
+
+}
+#menu:checked ~ ul a{
+    /*terug brengen*/
+    font-size: 1em;
+    height: 1em;
+    line-height: 1em;
+    transform: scaleY(1);
+    border-bottom: 1px solid #eee;
+}
+#menu:checked ~ .Toggle .fa-eye-slash {
+    display: block;
+}
+#menu:checked ~ .Toggle .fa-sliders-h {
+    display: none;
+}
+#menu{
+    display: none;
+}
+/*het menu verbergen*/
+.fa-eye-slash {
+    display: none;
+}
+.Toggle .fa-eye-slash{
+    display: none;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav a {
+  background-color: green;
+    display: block;
+    color: yellow;
+    text-decoration: none;
+    padding: 1em;
+    /*verberg het menu*/
+    border-bottom: 0 solid #eee;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    transform: scaleY(0);
+    transition: all 0.7s ease-out;
+}
+
+nav a:hover {
+    color: #fff;
+    background: lightgreen;
+
+}
+
+
+.submenu ul {
+    padding-left: .5em;
+    border-left: 5px double #ddd;
+}
+
+/*het submenu verbergen*/
+
+#nav .submenu li a {
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    transform: scaleY(0);
+    border-bottom-width: 0;
+    transition: all .5s ease-out;
+}
+
+/*submenu tonen met hover*/
+#nav .submenu:hover li a {
+    font-size: 1em;
+    height: 1em;
+    line-height: 1em;
+    transform: scaleY(1);
+    border-bottom-width: 1px;
+}
+
+.submenu > a {
+    display: grid;
+    grid-template-columns: 1fr auto ;
+}
+.submenu > a::after{
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    content: "\f0d7";
+}
+
+.submenu:hover > a::after {
+    content: "\f150";
+}
+
+main {
+    padding: 1em;
+}
+
+main img {
+    max-width: 60%;
+}
+footer{
+    padding: 1em;
+    background: green;
+    color: #ddd;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+
+/*bredere view port*/
+@media screen and (min-width:40em){
+    nav>ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    }
+    /*toggle label verwijderen*/
+    .Toggle {
+        display: none;
+    }
+    nav a {
+        font-size: 1em;
+        height: 1em;
+        line-height: 1em;
+        transform: scaleY(1);
+    }
+    .submenu {
+        position: relative;
+    }
+    .submenu ul {
+        position: absolute;
+        border-left: 0;
+        padding: 0;
+        width: 100%;
+
+    }
+    .submenu a {
+        background-color: #333;
+    }
+    /*een lijn toevoegen*/
+    nav>ul>li:not(:first-child) {
+        border-left: 10px solid #eee;
+    }
+
+}
+
+/*validatie*/
+#validatie img {
+    height: 2em;
+    width: auto;
+    border: 0;
+    margin: 0 .3em;
+}
