@@ -1,0 +1,93 @@
+html{
+  font-family: sans-serif;
+}
+
+body {
+  background-color: skyblue;
+  text-align: center;
+}
+
+html, body, div, article, p, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+
+  .wrapper {
+  text-align: left; 
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  align-items: center;
+  justify-items: center;
+  padding-left: 0.5em;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .wrapper {
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
+    @media screen and (max-width: 600px) {
+      .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+
+      }
+
+    }
+
+.cover {
+  width: 200px;
+  float: left;
+  margin: 1em;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+#skeelzfordabeelz {
+  width: 200px;
+  float: left;
+  margin: 1em;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+#skeelzfordabeelz article {
+  position: relative;
+  background-color: rgba(255,255,255,0.5);
+  height: 300px;
+  font-size: .7em;
+  padding: 1em;
+  margin-top: 0;
+  transition: transform 0.9s cubic-bezier(.40,1.4,.20,1);
+}
+
+#skeelzfordabeelz:hover article {
+transform: translateY(-240px);
+}
+
+
+
+.cover article {
+  position: relative;
+  background-color: rgba(255,255,255,0.5);
+  height: 300px;
+  font-size: .7em;
+  padding: 1em;
+  margin-top: 0;
+  transition: transform 0.9s cubic-bezier(.40,1.4,.20,1);
+  }
+
+.cover:hover article {
+transform: translateY(-230px);
+}
+
+
+.cover article h3, .cover article h4, .cover article p {
+  padding: .3em;
+}
