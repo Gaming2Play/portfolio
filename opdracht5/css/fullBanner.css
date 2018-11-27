@@ -1,0 +1,156 @@
+.fb{
+    width: 468px;
+    height: 60px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-image: url("../afb/schermCode.png");
+    color: white;
+    background-size: cover ;
+    font-size: 2em;
+    font-weight: bold;
+    animation: achterAnimatie 8s alternate infinite;
+    cursor: pointer;
+}
+
+@keyframes achterAnimatie {
+    0%, 10% {background-position: top}
+    90%, 100% {background-position: bottom}
+
+}
+/* de css van laag1 */
+.fb_laag1{
+    display: grid;
+    grid-template-columns: repeat(4, auto) 58px;
+    padding-left: 60px;
+    overflow: hidden;
+    transition: margin-top .5s cubic-bezier(.23,.19,.76,1.52);
+}
+
+.fb_laag1 > div {
+    height: 60px;
+    line-height: 58px;
+
+}
+
+/* de transition van de teksten */
+.fb_wat, .fb_almarmg, .fb_weet, .fb_ballon, .fb_html, .fb_css, .fb_js{
+    transition: transform .5s cubic-bezier(.23,.19,.76,1.52);
+}
+
+.fb_wat.fb--uit{
+    transform: translateY(-60px);
+}
+
+.fb_almarmg.fb--uit{
+    transform: translateY(60px);
+}
+
+.fb_weet.fb--uit{
+    transform: translateY(60px);
+}
+
+.fb_waggel{
+    display: inline-block;
+}
+.fb_waggel.fb--waggel{
+    animation: waggelen 1s forwards;
+
+}
+@keyframes waggelen {
+    0%, 70%, 100% { transform: rotate(0)}
+    10% { transform: rotate(-23deg)}
+    20% { transform: rotate(20deg)}
+    30% { transform: rotate(-10deg)}
+    40% { transform: rotate(13deg)}
+    50% { transform: rotate(-6deg)}
+    60% { transform: rotate(3deg)}
+}
+
+
+/* hier staat alle css van de ballon */
+
+.fb_nl{
+    color: #333;
+    z-index: 2;
+}
+
+.fb_laag1 .fb_ballon{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5em;
+    align-self: center;
+    transform: translateX(-1.8em) translateY(0);
+}
+
+.fb_laag1 .fb_ballon.fb--uit{
+    transform: translateX(-1.8em) translateY(60px);
+}
+.fb:hover .fb_ballon{
+    background: red;
+}
+
+.fb_laag1.fb--uit {
+    margin-top: -60px;
+}
+
+/* de css van laag 2 */
+.fb_laag2{
+    display: grid;
+    grid-template-columns: 1fr 50px 50px 58px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 60px;
+    overflow: hidden;
+}
+
+/* de css van de regel coderen */
+.fb_tut{
+    letter-spacing: -.1em;
+    padding-left: 2.5em;
+}
+
+.fb_tut.fb--uit span{
+    display: inline-block;
+    animation: blob .7s forwards;
+    opacity: 0;
+}
+
+
+@keyframes blob {
+    0% { opacity: 0; transform: scale(9)}
+    90% { opacity: 1; transform: scale(.9)}
+    100% { opacity: 1; transform: scale(1)}
+
+}
+
+.fb_tut.fb--uit .l2 { animation-delay: .1s; }
+.fb_tut.fb--uit .l3 { animation-delay: .2s; }
+.fb_tut.fb--uit .l4 { animation-delay: .3s; }
+.fb_tut.fb--uit .l5 { animation-delay: .4s; }
+.fb_tut.fb--uit .l6 { animation-delay: .5s; }
+.fb_tut.fb--uit .l7 { animation-delay: .6s; }
+
+
+
+/* de css van de logo's */
+.fb_html, .fb_css {
+    height: 50px;
+    align-self: center;
+}
+
+.fb_html.fb--uit{
+    transform: translateY(-60px);
+}
+.fb_css.fb--uit{
+    transform: translateY(60px);
+}
+
+
+
+.fb_js{
+    height: 58px;
+}
+.fb_js.fb--uit{
+    transform: translateX(60px);
+}
