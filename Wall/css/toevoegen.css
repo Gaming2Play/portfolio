@@ -1,0 +1,38 @@
+.wrapper {
+    border-style: solid;
+    border-radius: 5px;
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    background-color: white;
+    color: grey;
+    text-decoration: none;
+    border-width: 0;
+}
+
+
+
+html {
+    background-image: url("../images/bg.jpg");
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+textarea {
+    width: 80%;
+}
+
+img{
+    border-style: dotted;
+    border-color: grey;
+    width:auto;
+    height: 180px;
+}
+input[type=file]{
+    padding:10px;
+}
